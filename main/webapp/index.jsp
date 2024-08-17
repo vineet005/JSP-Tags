@@ -1,28 +1,21 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ page import = "java.util.ArrayList" %>
+<%@ page import = "java.util.Date" %>
+<%@ page import = "java.text.SimpleDateFormat" %>
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Product List</title>
+    <title>Current Date and Time</title>
 </head>
 <body>
-    <h2>Product List</h2>
-    <ul>
+    <h1>Current Date and Time</h1>
+    <p>
         <%
-            // Create an ArrayList to store product names
-            ArrayList<String> products = new ArrayList<String>();
-            products.add("Product 1");
-            products.add("Product 2");
-            products.add("Product 3");
-            products.add("Product 4");
-            products.add("Product 5");
-
-            // Iterate over the list and display each product name
-            for (int i = 0; i < products.size(); i++) {
-                out.println("<li>" + products.get(i) + "</li>");
-            }
+            Date date = new Date();
+            SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
+            String formattedDate = sdf.format(date);
         %>
-    </ul>
+        <%= formattedDate %>
+    </p>
 </body>
 </html>
