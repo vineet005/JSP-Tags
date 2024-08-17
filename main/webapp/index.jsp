@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import = "java.util.ArrayList" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +11,7 @@
     <ul>
         <%
             // Create an ArrayList to store product names
-            java.util.ArrayList<String> products = new java.util.ArrayList<String>();
+            ArrayList<String> products = new ArrayList<String>();
             products.add("Product 1");
             products.add("Product 2");
             products.add("Product 3");
