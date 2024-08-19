@@ -1,22 +1,16 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ page import = "java.util.Date" %>
-<%@ page import = "java.text.SimpleDateFormat" %>
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>Current Date and Time</title>
+<title>User Form</title>
 </head>
 <body>
-    <h1>Current Date and Time</h1>
-    
-    <p>
-        <%
-            Date date = new Date();
-            SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
-            String formattedDate = sdf.format(date);
-        %>
-        <%= formattedDate %>
-    </p>
+<h2>User Form</h2>
+<form action="processForm.jsp" method="post">
+<label for="name">Name:</label>
+<input type="text" id="name" name="name" required><br><br>
+<label for="email">Email:</label>
+<input type="email" id="email" name="email" required><br><br>
+<input type="submit" value="Submit">
+</form>
 </body>
 </html>
