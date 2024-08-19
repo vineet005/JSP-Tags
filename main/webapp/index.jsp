@@ -9,6 +9,7 @@
 </head>
 <body>
     <h1>Current Date and Time</h1>
+    
     <p>
         <%
             Date date = new Date();
